@@ -1,3 +1,0 @@
-[providers.php]
-version = "8.4"
-extensions = ["intl", "zip", "pdo_mysql", "bcmath"]
