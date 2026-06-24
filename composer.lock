@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "16e580cbcc4bf6c3eb18eeb072b3e823",
+    "content-hash": "06a6897d723ce404a1639d47358de601",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -2251,16 +2251,16 @@
         },
         {
             "name": "laravel/prompts",
-            "version": "v0.3.19",
+            "version": "v0.3.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/prompts.git",
-                "reference": "ac8ac2c3ec598df031dcd474a002a51b7b6e69a5"
+                "reference": "6d53c826dfd33ec5f4ac91f816ff327727c7988b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/prompts/zipball/ac8ac2c3ec598df031dcd474a002a51b7b6e69a5",
-                "reference": "ac8ac2c3ec598df031dcd474a002a51b7b6e69a5",
+                "url": "https://api.github.com/repos/laravel/prompts/zipball/6d53c826dfd33ec5f4ac91f816ff327727c7988b",
+                "reference": "6d53c826dfd33ec5f4ac91f816ff327727c7988b",
                 "shasum": ""
             },
             "require": {
@@ -2304,9 +2304,9 @@
             "description": "Add beautiful and user-friendly forms to your command-line applications.",
             "support": {
                 "issues": "https://github.com/laravel/prompts/issues",
-                "source": "https://github.com/laravel/prompts/tree/v0.3.19"
+                "source": "https://github.com/laravel/prompts/tree/v0.3.20"
             },
-            "time": "2026-06-23T01:06:19+00:00"
+            "time": "2026-06-24T19:16:38+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -11265,11 +11265,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.2"
+        "php": "^8.4.1"
     },
     "platform-dev": {},
-    "platform-overrides": {
-        "php": "8.4.0"
-    },
     "plugin-api-version": "2.9.0"
 }
