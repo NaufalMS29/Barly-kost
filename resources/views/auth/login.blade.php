@@ -26,7 +26,7 @@
                     <a href="{{ route('landing') }}" class="flex items-center space-x-2">
                         <div
                             class="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-sm">UP</span>
+                            <span class="text-white font-bold text-sm">BK</span>
                         </div>
                         <span class="text-xl font-bold text-gray-900">Barly Kost</span>
                     </a>
@@ -57,7 +57,7 @@
                 <div class="flex items-center justify-center mb-6">
                     <div
                         class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">UP</span>
+                        <span class="text-white font-bold text-lg">BK</span>
                     </div>
                 </div>
                 <h2 class="text-3xl font-bold text-gray-900 mb-2">
