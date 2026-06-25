@@ -2,11 +2,11 @@
 
 namespace App\Filament\Resources\PembayaranResource\Pages;
 
+use App\Filament\Resources\PembayaranResource;
 use Filament\Actions;
 use Filament\Infolists;
 use Filament\Infolists\Infolist;
 use Filament\Resources\Pages\ViewRecord;
-use App\Filament\Resources\PembayaranResource;
 
 class ViewPembayaran extends ViewRecord
 {
@@ -19,7 +19,7 @@ class ViewPembayaran extends ViewRecord
             Actions\DeleteAction::make(),
         ];
     }
-    
+
     public function infolist(Infolist $infolist): Infolist
     {
         return $infolist
@@ -41,14 +41,6 @@ class ViewPembayaran extends ViewRecord
                         Infolists\Components\TextEntry::make('metode_pembayaran')
                             ->label('Metode'),
                     ]),
-                
-                Infolists\Components\Section::make('Bukti Pembayaran')
-                    ->schema([
-                        Infolists\Components\ImageEntry::make('bukti_pembayaran')
-                            ->label('')
-                            ->height(300)
-                            ->columnSpanFull(),
-                    ])
             ]);
     }
 }
