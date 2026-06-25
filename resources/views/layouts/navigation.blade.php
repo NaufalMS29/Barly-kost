@@ -1,7 +1,6 @@
 <nav class="bg-white/95 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
             <div class="flex items-center">
                 <a href="{{ route('landing') }}" class="flex items-center space-x-2">
                     <div
@@ -12,12 +11,12 @@
                 </a>
             </div>
 
-            <!-- Desktop Navigation & Profile -->
             <div class="hidden md:flex items-center space-x-8">
                 <a href="{{ route('landing') }}"
                     class="text-gray-600 hover:text-gray-900 font-medium transition-colors {{ request()->routeIs('landing') ? 'text-blue-600' : '' }}">
                     Home
                 </a>
+
                 @auth
                 <a href="{{ route('dashboard') }}"
                     class="text-gray-600 hover:text-gray-900 font-medium transition-colors {{ request()->routeIs('dashboard') ? 'text-blue-600' : '' }}">
@@ -44,8 +43,8 @@
                         </x-dropdown-link>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-                            <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                            <x-dropdown-link :href="route('logout')"
+                                onclick="event.preventDefault(); this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form>
@@ -62,7 +61,6 @@
                 @endauth
             </div>
 
-            <!-- Hamburger -->
             <div class="-me-2 flex items-center md:hidden">
                 <button @click="open = ! open"
                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
@@ -78,9 +76,8 @@
         </div>
     </div>
 
-    <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden md:hidden">
-        <div class="pt-2 pb-3 space-y-1">
+        <div class="pt-2 pb-3 space-y-1 px-4">
             <x-responsive-nav-link :href="route('landing')" :active="request()->routeIs('landing')">
                 {{ __('Home') }}
             </x-responsive-nav-link>
@@ -91,29 +88,31 @@
             @endauth
         </div>
 
-        <!-- Responsive Settings Options -->
         @auth
-        <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
+        <div class="pt-4 pb-1 border-t border-gray-200 px-4">
+            <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+            <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
 
             <div class="mt-3 space-y-1">
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-
-                <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
-                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
-                                        this.closest('form').submit();">
+                    <x-responsive-nav-link :href="route('logout')"
+                        onclick="event.preventDefault(); this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
                 </form>
             </div>
+        </div>
+        @else
+        <div class="pt-4 pb-4 border-t border-gray-200 px-4 flex flex-col space-y-2">
+            <a href="{{ route('login') }}"
+                class="text-gray-600 hover:text-gray-900 font-medium py-2 text-center">Masuk</a>
+            <a href="{{ route('register') }}"
+                class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full font-semibold text-center">Daftar
+                Sekarang</a>
         </div>
         @endauth
     </div>

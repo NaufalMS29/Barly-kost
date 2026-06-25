@@ -32,6 +32,6 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        Kamar::factory(24)->create(['status' => 'Kosong']);
+        Kamar::factory(9)->create(['status' => 'Kosong']);
     }
 }
